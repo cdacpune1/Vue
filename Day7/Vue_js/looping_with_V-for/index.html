@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+    <meta charset="utf-8">
+    <title>Conditionals</title>
+    <link href="styles.css" rel="stylesheet"/>
+    <script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+    <div id="d1">
+    <h1>Looping_with_v-For</h1>
+   <!-- {{char1[0]}}
+   {{char1[1]}} -->
+<ul>
+    <li v-for="(x,index) in char1">{{index}}.{{x}}</li>
+
+</ul>
+<!-- <ul>
+    <li v-for="nin in ninja">{{nin.name}} - {{nin.age}}</li>
+</ul> -->
+<ul>
+    <li v-for="(nin,index) in ninja">{{index}} . {{nin.name}} - {{nin.age}}</li>
+</ul> 
+
+<template v-for="(nin,index) in ninja">
+    <h3>{{index}}.{{nin.name}}</h3>
+    <p>{{nin.age}}</p>
+</template>
+<!-- <template v-for="nin in ninja">
+    <div v-for="(val,key) in nin">
+    <p>
+        {{key}} - {{val}}
+    </p>    
+    </div>
+</template> itterate array objects-->
+</div>
+<script src="./VueJs/sample.js"></script>
+</body>
+</html>

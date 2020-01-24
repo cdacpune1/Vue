@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Que1</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+<div id ="r">
+    <h1>Name:</h1>
+  
+    <input v-model = "name" placeholder="Enter Ur name"/>
+    <h3>Name Entered is:{{name}}</h3>
+    <hr/></div>
+
+    <div id="r1" >
+        <!-- You can not access data and methods out side the div -->
+
+        <h1> List of Cities:</h1> <!--  method -->
+<ul>
+    <li v-for="citys in citynm">{{citys}}</li>
+</ul>
+<hr/>
+  </div>
+
+  <div id = "r2">
+    <h1> List of Country_city:</h1> <!--  method -->
+    <ul>
+        <li v-for="(cont,index) in country"> {{index}}.{{cont.name}}<br/>
+            <li v-for="x in cont.city">{{x}}</li>
+        </li>    <!--{{index}}.{{cont.name}}<br/> {{cont.city[0]}}|{{cont.city[1]}}|{{cont.city[2]}}|{{cont.city[3]}}-->
+       
+    </ul>
+
+  </div>
+
+
+
+    <script src="./vuejs/sample.js">
+
+    </script>
+
+</body>
+
+</html>

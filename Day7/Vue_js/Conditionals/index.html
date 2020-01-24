@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+>
+    <meta charset="utf-8">
+    <title>Conditionals</title>
+    <!-- <link href="styles.css" rel="stylesheet"/> -->
+    <script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+    <div id="d1">
+    <h1>Conditionals</h1>
+    <button v-on:click="error= !error">Toggle Error</button>    
+    <button v-on:click="success = !success">Toggle Success </button>
+<!-- <p v-if="error">There has been error:</p>
+<p v-else-if="success">heySuccess:</p> -->
+<p v-show="error">There has been error:</p>
+<p v-show="success">heySuccess:</p>
+
+</div>
+<script src="./VueJs/sample.js"></script>
+</body>
+</html>

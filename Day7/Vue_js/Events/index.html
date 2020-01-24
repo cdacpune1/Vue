@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<head>
+    <meta charset=" utf-8">
+    <title> Vue_Events</title>
+<!-- <link href="style.css" rel="stylesheet"/> -->
+<script src="https://unpkg.com/vue"></script>
+   
+</head>
+<body>
+    <div id ="d1">
+        
+        <h1>Events</h1>
+        
+        <!-- <button v-on:click = "age++">Add yr</button>
+        <button v-on:click = "age--">Sub yr</button> -->
+        <!-- OR -->
+        <button  v-on:click.once = "add(1)" v-bind:style = "stlobj">Add yr</button>
+        <button v-on:click = "sub(1)"  v-bind:style = "stlobj">Sub yr</button>
+        <button @click = "add(10)"  v-bind:style = "stlobj">Add 10 yr</button>  <!-- or -->
+        <button v-on:dblclick = "sub(10)"  v-bind:style = "stlobj">Sub 10 yr</button>
+        
+
+
+        <p>My Age Is:{{age}}</p>    
+    </div>
+        <script src = "./VueJs/sample.js"></script> 
