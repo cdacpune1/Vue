@@ -9,35 +9,35 @@
 </head>
 <body>
     <div id ="d1"class = "main">
-        <form name="form">
+        <div name="form">
             <h1 align = "center" >MyCalSee</h1>
 
-            <input class= "textview" v-bind:value = "x">{{x}}
-        </form>
+            <div class= "textview">{{current || '0'}}</div>
+        </div>
 <table>
     <tr>
-        <td><input  type="button" class="button" value="C" ></td>
-        <td><input  type="button" class="button" value="0" ></td>
-        <td><input  type="button" class="button" value="/" ></td>
-        <td><input  type="button" class="button" value="*" ></td>
+        <td><input  type="button" class="btn" @click="clear" value="C" ></td>
+        <td><input  type="button"  @click="append('0')" class="btn" value="0" ></td>
+        <td><input  type="button" @click = "div" class="btn opr" value="/" ></td>
+        <td><input  type="button" @click = "mul" class="btn opr" value="*" ></td>
     </tr>
     <tr>
-        <td><input  type="button" class="button" value="7" v-on:click="fun(7)"></td>
-        <td><input  type="button" class="button" value="8" ></td>
-        <td><input  type="button" class="button" value="9" ></td>
-        <td><input   type="button" class="button" value="-"></td>
+        <td><input  type="button" @click="append('7')" class="btn" value="7"></td>
+        <td><input  type="button" @click="append('8')" class="btn" value="8" ></td>
+        <td><input  type="button" @click="append('9')" class="btn" value="9" ></td>
+        <td><input   type="button"  @click = "min" class="btn opr" value="-"></td>
     </tr>
     <tr>
-        <td><input type="button" class="button" value="4"  ></td>
-        <td><input  type="button"class="button" value="5"  ></td>
-        <td><input  type="button" class="button" value="6" ></td>
-        <td><input type="button" class="button" value="+"  ></td>
+        <td><input type="button"  @click="append('4')" class="btn" value="4"  ></td>
+        <td><input  type="button" @click="append('5')" class="btn" value="5"  ></td>
+        <td><input  type="button" @click="append('6')" class="btn" value="6" ></td>
+        <td><input type="button" @click = "add" class="btn opr" value="+"  ></td>
     </tr>
     <tr>
-        <td><input  type="button" class="button" value="1" ></td>
-        <td><input  type="button" class="button" value="2" ></td>
-        <td><input  type="button" class="button" value="3" ></td>
-        <td><input  type="button" class="button" value="=" ></td>
+        <td><input  type="button" @click="append('1')" class="btn" value="1" ></td>
+        <td><input  type="button" @click="append('2')" class="btn" value="2" ></td>
+        <td><input  type="button" @click="append('3')" class="btn" value="3" ></td>
+        <td><input  type="button" @click = "total" class="btn opr" value="=" ></td>
     </tr>
     
     
