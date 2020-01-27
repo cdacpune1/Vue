@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<head>
+    <meta charset=" utf-8">
+    <title>Cal</title>
+    <link href="./css/style.css" rel="stylesheet">
+
+<script src="https://unpkg.com/vue"></script>
+   
+</head>
+<body>
+    <div id ="d1"class = "main">
+        <div name="form">
+            <h1 align = "center" >MyCalSee</h1>
+
+            <div class= "textview">{{current || '0'}}</div>
+        </div>
+<table>
+    <tr>
+        <td><input  type="button" class="btn" @click="clear" value="C" ></td>
+        <td><input  type="button"  @click="append('0')" class="btn" value="0" ></td>
+        <td><input  type="button" @click = "div" class="btn opr" value="/" ></td>
+        <td><input  type="button" @click = "mul" class="btn opr" value="*" ></td>
+    </tr>
+    <tr>
+        <td><input  type="button" @click="append('7')" class="btn" value="7"></td>
+        <td><input  type="button" @click="append('8')" class="btn" value="8" ></td>
+        <td><input  type="button" @click="append('9')" class="btn" value="9" ></td>
+        <td><input   type="button"  @click = "min" class="btn opr" value="-"></td>
+    </tr>
+    <tr>
+        <td><input type="button"  @click="append('4')" class="btn" value="4"  ></td>
+        <td><input  type="button" @click="append('5')" class="btn" value="5"  ></td>
+        <td><input  type="button" @click="append('6')" class="btn" value="6" ></td>
+        <td><input type="button" @click = "add" class="btn opr" value="+"  ></td>
+    </tr>
+    <tr>
+        <td><input  type="button" @click="append('1')" class="btn" value="1" ></td>
+        <td><input  type="button" @click="append('2')" class="btn" value="2" ></td>
+        <td><input  type="button" @click="append('3')" class="btn" value="3" ></td>
+        <td><input  type="button" @click = "total" class="btn opr" value="=" ></td>
+    </tr>
+    
+    
+</table>
+        
+
+</div>
+        <script src = "./vuejs/sample.js"></script> 
+</body>
+</html>
